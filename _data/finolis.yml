@@ -1,10 +1,6 @@
 - nombre: Gaston
   apellido: Armagno
   posicion: CEO / Director / Productor / Redactor Creativo
-  
-- nombre: Santiago
-  apellido: Fernandez
-  posicion: Director de Sonido / Sonido Directo y Post-producción
    
 - nombre: Marcelo
   apellido: Bessonart
@@ -37,6 +33,10 @@
 - nombre: Agustín
   apellido: Lorenzo
   posicion: Cámara
+  
+- nombre: Santiago
+  apellido: Fernandez
+  posicion: Director de Sonido / Sonido Directo y Post-producción
   
 - nombre: Nacho
   apellido: Elizalde
