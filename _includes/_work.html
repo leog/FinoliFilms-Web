@@ -1,0 +1,65 @@
+<section style="position:relative;" class="page-section page-sections-108 " id="trabajos">
+	<div class="container">
+		<div class="titleBar">
+			<span></span>
+			<h2>Lo que hacemos</h2>
+		</div>
+		<div class="filter">
+			<ul id="filterOptions">
+				<li>
+					<a href="http://www.finolifilms.com/#" rel="all" class="color-btn main-btn">Todo</a>
+				</li>
+				{% assign categories = site.trabajos | map: 'categories' | join: ' ' | replace: 'Reciente', '' | split: ' ' | uniq }} %}
+				{% for category in categories %}
+				<li>
+					<a href="http://www.finolifilms.com/#" rel="{{ category | downcase }}" class="color-btn gray">{{ category }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+
+			<span class="gallery-option" id="portfolio-column-change" style="display: none;">
+				<a href="http://www.finolifilms.com/#" id="three">
+					<img src="img/three.png" alt="">
+				</a>
+				<a href="http://www.finolifilms.com/#" id="four">
+					<img src="img/four.png" alt="">
+				</a>
+			</span>
+		</div>	
+
+		<ul class="portfolio-layout holder quicksand">
+			{% assign all_work = site.trabajos | where: "list", true %}
+			{% for trabajo in all_work %}
+			<li class="four columns" data-id="{{forloop.index}}" data-type="{{trabajo.categories | join: ' ' | downcase}}">
+				<div class="gallery-padding">
+					<div class="img-frame">
+						<div class="image-wrapper">
+							<img src="img/work/{{trabajo.title | slugify | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: 'ñ', 'n'}}.jpg" alt="{{trabajo.title}}" class="scale-with-grid">
+							<div class="mouse-effect"></div>
+							<span class="extra-links">
+								<a href="http://www.youtube.com/embed/{{trabajo.video_id}}?autoplay=1&amp;showinfo=0?iframe=true&amp;width=75%&amp;height=75%" title="{{trabajo.title}}" rel="project[{{trabajo.title | slugify}}]" class="title">{{trabajo.title}}</a>
+								<a href="{{trabajo.url  | remove: '.html'}}" class="more">Más información</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			{% endfor %} 
+					
+			<li class="four columns" data-id="id-207" data-type="series">
+				<div class="gallery-padding">
+					<div class="img-frame">
+						<div class="image-wrapper">
+							<img src="/img/work/apartamento-404.jpg" alt="Apartamento 404" class="scale-with-grid">
+							<div class="mouse-effect"></div>
+							<span class="extra-links">
+								<a href="/img/work/apartamento-404.jpg" title="Apartamento 404" rel="project[apartamento-404]" class="title">Apartamento 404</a>
+								<a href="/trabajos/apartamento-404" class="more">Más información</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>

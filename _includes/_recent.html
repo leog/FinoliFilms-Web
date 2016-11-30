@@ -1,0 +1,30 @@
+<section style="position:relative;" class="page-section page-sections-71 " id="trabajos-recientes">
+	<div class="container">
+		<div class="titleBar">
+			<span></span>
+			<h2>Los últimos trabajos de Finoli</h2>
+		</div>
+		<div class="recent-works-view nzs-isotype clearfix isotope" style="position: relative; overflow: hidden; height: 352px;">
+			{% assign recent_work = site.trabajos | where: "recent", true %}
+			{% for trabajo in recent_work %}
+			<div class="one-third column nzs-iso-enabled project isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+				<div class="gallery-padding">
+					<div class="img-frame">
+						<div class="image-wrapper">
+							<a href="http://www.youtube.com/embed/{{trabajo.video_id}}?autoplay=1&amp;showinfo=0&amp;iframe=true&amp;width=75%&amp;height=75%" title="{{trabajo.title}}" rel="project[{{trabajo.title | slugify}}]" class="photo-box"></a>
+							<a href="http://www.youtube.com/embed/{{trabajo.video_id}}?autoplay=1&amp;showinfo=0&amp;iframe=true&amp;width=75%&amp;height=75%" title="{{trabajo.title}}" rel="project[iframes]" class="video-preview">
+								<img src="img/work/{{trabajo.title | slugify | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: 'ñ', 'n'}}.jpg" alt="{{trabajo.title}}" class="scale-with-grid">
+							</a>					
+							<div class="mouse-effect"></div>
+							<span class="extra-links">
+								<a class="photo-up"></a>
+								<a href="{{trabajo.url | remove: '.html'}}">{{trabajo.title}}</a>							
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}				
+		</div>
+	</div>
+</section>

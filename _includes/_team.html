@@ -1,0 +1,21 @@
+<section style="position:relative;" class="page-section page-sections-116 " id="equipo">
+	<div class="container">
+		<div class="titleBar">
+			<span></span>
+			<h2>Nuestro equipo</h2>
+		</div>
+		<ul class="team clearfix">
+		{% for persona in site.data.finolis %}
+            <li class="four columns">
+				<span class="img-wrap">
+					<img src="img/team/{{ persona.nombre | replace: "á", "a" | replace: "é", "e" | replace: "í", "i" | replace: "ó", "o" | replace: "ú", "u" | replace: "ñ", "n" | slugify | append: '-' | append: persona.apellido | replace: "á", "a" | replace: "é", "e" | replace: "í", "i" | replace: "ó", "o" | replace: "ú", "u" | replace: "ñ", "n" | slugify }}.jpg" alt="" class="rounded scale-with-grid">
+				</span>
+				<div class="name">
+					{{ persona.nombre }} <span>{{ persona.apellido }}</span><em>{{ persona.posicion }}</em>
+				</div>
+				<div class="social"></div>
+			</li>
+        {% endfor %}
+		</ul>
+	</div>
+</section>

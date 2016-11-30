@@ -1,0 +1,14 @@
+domain_url: http://localhost:4000/
+
+collections:
+  trabajos:
+    output: true
+    
+defaults:
+  - scope:
+      path: ""
+      type: trabajos
+    values:
+      layout: trabajo
+      list: true
+      recent: false

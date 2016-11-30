@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+{% include _head.html %}
+
+<body class="single single-recent_works postid-275 logged-in">
+
+	<div id="up"></div>
+
+	{% include _nav.html %}
+
+	<section class="work page-padding" id="work">
+		<div class="container">
+			<div class="titleBar">
+				<h2>{{page.title}}</h2>
+			</div>
+			
+			<article class="page" style="padding-top:8px;">
+				<div class="featured-image img-frame">
+					<div class="featured-video">
+						<div class="nzs-responsive-video">
+							<iframe src="http://www.youtube.com/embed/{{page.video_id}}?autoplay=1&showinfo=0" width="400" height="300" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="content single clearfix">
+					<div class="one-third column">
+						<p>INFORMACIÓN</p>
+						<p>
+							CATEGORÍA: <span style="font-weight: 400;">{{page.categories | join: " " | remove: "Reciente" | remove: "Festival"}}</span><br>
+							TIPO: <span style="font-weight: 400;">{{page.type}}</span><br>
+							CLIENTE: <span style="font-weight: 400;">{{page.client}}</span>
+						</p>
+					</div>
+					<div class="two-thirds column">
+						<p>DETALLES</p>
+						<p>
+							<span style="font-weight: 400;">{{page.description}}</span>
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+</body>
+</html>
