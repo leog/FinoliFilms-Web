@@ -6,25 +6,25 @@
 	<nav class="mainMenu">
 		<ul id="main-menu" class="menu">
 			<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
-				<a href="{{site.domain_url}}#up">Inicio</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#up">Inicio</a>
 			</li>
 			<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page-sections menu-item-252">
-				<a href="{{site.domain_url}}#trabajos-recientes">Trabajos</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#trabajos-recientes">Trabajos</a>
 			</li>
 			<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page-sections menu-item-87">
-				<a href="{{site.domain_url}}#servicios">Servicios</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#servicios">Servicios</a>
 			</li>
 			<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page-sections menu-item-203">
-				<a href="{{site.domain_url}}#trabajos">Trabajos</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#trabajos">Trabajos</a>
 			</li>
 			<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page-sections menu-item-117">
-				<a href="{{site.domain_url}}#equipo">Equipo</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#equipo">Equipo</a>
 			</li>
 			<li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page-sections menu-item-297">
-				<a href="{{site.domain_url}}#clientes">Clientes</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#clientes">Clientes</a>
 			</li>
 			<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page-sections menu-item-93">
-				<a href="{{site.domain_url}}#contacto">Contacto</a>
+				<a href="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#contacto">Contacto</a>
 			</li>
 			<li id="menu-item-316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-316">
 				<a href="http://blog.finolifilms.com">Blog</a>
@@ -33,13 +33,13 @@
 	</nav>
 	<select size="1" id="subMenu" name="subMenu">
 		<option selected="selected" value="">Menu</option>
-		<option value="#up">Inicio</option>
-		<option value="#trabajos-recientes">Trabajos</option>
-		<option value="#servicios">Servicios</option>
-		<option value="#trabajos">Trabajos</option>
-		<option value="#equipo">Equipo</option>
-		<option value="#clientes">Clientes</option>
-		<option value="#contacto">Contacto</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#up">Inicio</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#trabajos-recientes">Trabajos</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#servicios">Servicios</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#trabajos">Trabajos</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#equipo">Equipo</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#clientes">Clientes</option>
+		<option value="{% if page.layout == 'trabajo' %}{{site.domain_url}}{% endif %}#contacto">Contacto</option>
 		<option value="http://blog.finolifilms.com">Blog</option>
 	</select>
 	</div>
