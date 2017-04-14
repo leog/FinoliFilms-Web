@@ -722,3 +722,7 @@ body.single-post {
 	background: url("../img/payaso.jpg") repeat 50% -3px fixed transparent;
 	background-size:cover;
 }
+
+.pp_gallery {
+    display: none !important;
+}

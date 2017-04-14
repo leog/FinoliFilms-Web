@@ -140,26 +140,8 @@
             h = l + titleHeight + $pp_pic_holder.find(".pp_top").height() + $pp_pic_holder.find(".pp_bottom").height();
             p = t
         }
-        function S(e) {
-            if (e.match(/youtube\.com\/watch/i) || e.match(/youtu\.be/i)) {
-                return "youtube"
-            } else if (e.match(/vimeo\.com/i)) {
-                return "vimeo"
-            } else if (e.match(/\b.mov\b/i)) {
-                return "quicktime"
-            } else if (e.match(/\b.swf\b/i)) {
-                return "flash"
-            } else if (e.match(/\biframe=true\b/i)) {
-                return "iframe"
-            } else if (e.match(/\bajax=true\b/i)) {
-                return "ajax"
-            } else if (e.match(/\bcustom=true\b/i)) {
-                return "custom"
-            } else if (e.substr(0, 1) == "#") {
-                return "inline"
-            } else {
-                return "image"
-            }
+        function S() {
+            return "iframe"
         }
         function x() {
             if (doresize && typeof $pp_pic_holder != "undefined") {
@@ -530,7 +512,6 @@
                 case "iframe":
                     a = w(movie_width, movie_height);
                     frame_url = pp_images[set_position];
-                    frame_url = frame_url.substr(0, frame_url.indexOf("iframe") - 1);
                     toInject = settings.iframe_markup.replace(/{width}/g, a["width"]).replace(/{height}/g, a["height"]).replace(/{path}/g, frame_url);
                     break;
                 case "ajax":
