@@ -11,8 +11,8 @@
 				<div class="gallery-padding">
 					<div class="img-frame">
 						<div class="image-wrapper">
-							<a href="{{trabajo.video_url}}&bcustom=true" title="{{trabajo.title}}" rel="project[{{trabajo.title | slugify}}]" class="photo-box"></a>
-							<a href="{{trabajo.video_url}}&bcustom=true" title="{{trabajo.title}}" rel="project[iframes]" class="video-preview">
+							<a href="https://www.youtube.com/embed/{{trabajo.video_id}}?autoplay=1&amp;showinfo=0&amp;iframe=true&amp;width=75%&amp;height=75%" title="{{trabajo.title}}" rel="project[{{trabajo.title | slugify}}]" class="photo-box"></a>
+							<a href="https://www.youtube.com/embed/{{trabajo.video_id}}?autoplay=1&amp;showinfo=0&amp;iframe=true&amp;width=75%&amp;height=75%" title="{{trabajo.title}}" rel="project[iframes]" class="video-preview">
 								<img src="img/work/{{trabajo.title | slugify | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: 'ñ', 'n'}}.jpg" alt="{{trabajo.title}}" class="scale-with-grid">
 							</a>					
 							<div class="mouse-effect"></div>
