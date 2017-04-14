@@ -37,7 +37,7 @@
 							<img src="img/work/{{trabajo.title | slugify | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: 'ñ', 'n'}}.jpg" alt="{{trabajo.title}}" class="scale-with-grid">
 							<div class="mouse-effect"></div>
 							<span class="extra-links">
-								<a href="{{trabajo.video_url}}" title="{{trabajo.title}}" rel="project[{{trabajo.title | slugify}}]" class="title">{{trabajo.title}}</a>
+								<a href="{{trabajo.video_url}}&bcustom=true" title="{{trabajo.title}}" rel="project[{{trabajo.title | slugify}}]" class="title">{{trabajo.title}}</a>
 								<a href="{{trabajo.url  | remove: '.html'}}" class="more">Más información</a>
 							</span>
 						</div>
